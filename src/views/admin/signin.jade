@@ -1,0 +1,31 @@
+extends layouts/base-layout
+block append content
+    if errorMsg
+        h2.text-center.alert.alert-danger #{errorMsg} 
+    else
+        h2
+    .container  
+        .row
+            h2.text-center  开发者登录
+        .row 
+          .col-md-6.col-md-offset-3 
+            form(action='/admin',method='POST')
+              .form-group
+                label  手机号  
+                input(type="text",name='phone').form-control#phone
+              .form-group  
+                label 密码 
+                input(type="password",name='password').form-control#password
+              .row
+                .col-md-6.col-md-offset-3
+                  button.btn.btn-success.btn-block.text-center(type='submit')  登录
+            .row
+              .col-md-6
+                .btn.btn-link.btn-block(href="/admin/forgot-password") 忘记密码  
+              .col-md-6
+                a.btn.btn-link.btn-block(href="/admin/signup") 加入我们
+
+  
+block append script
+    
+

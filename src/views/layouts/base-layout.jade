@@ -1,0 +1,24 @@
+doctype html
+html
+    head
+        title 刺月无影
+        meta(content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no",name="viewport")
+        link(rel='stylesheet',href='/libs/bootstrap/dist/css/bootstrap.min.css')
+        link(rel='stylesheet',href='/app.css')
+        block style
+    body     
+        include navbar
+        block content
+        block foot
+        block script
+            script(src='/libs/jquery/dist/jquery.min.js')
+            script(src="/libs/bootstrap/dist/js/bootstrap.min.js")
+                //- 导航栏自动下拉
+            script.
+                $(function(){
+                    $('.dropdown-toggle').on('mouseenter',function(){
+                        $(this).dropdown('toggle'); 
+                    })
+                });
+        block myScript
+            

@@ -1,0 +1,35 @@
+header
+    .navbar.navbar-default.navbar-fixed-top
+        .container-fluid
+            .navbar-header
+                a.navbar-brand
+                    img(src="https://tslang.cn/assets/images/logo_nocircle.svg").navbar-logo
+                button.navbar-toggle.pull-left(data-toggle='collapse',data-target="#navbar-collapse-div")
+                    span.sr-only
+                    span.icon-bar
+                    span.icon-bar
+                    span.icon-bar
+            //- img(src="https://github.com/Microsoft/TypeScript")
+            //- 主要的菜单
+            .collapse.navbar-collapse.navbar_center#navbar-collapse-div
+                .nav.navbar-nav.navbar-left
+                    li: a(href='/')   主页
+                    li.dropdown 
+                        a.dropdown-toggle(data-toggle='dropdown') 开发者业务
+                            span.caret
+                        ul.dropdown-menu
+                            li: a(href='/develop/website') 网站开发
+                            li: a(href='/develop/webapp') webapp开发
+                            li: a(href='/develop/app')   原生app开发
+                            li: a(href='/develop/wechat')   微信
+                    li.dropdown 
+                        a.dropdown-toggle(data-toggle='dropdown')  设计业务
+                            span.caret
+                        ul.dropdown-menu
+                            li: a(href='/design/')  平面设计
+                            li: a(href='/design/')  平面设计
+                            li: a(href='/design/')  平面设计
+                            li: a(href='/design/')  平面设计
+                    li: a(href='/')  关于
+                    li: a(href='/')  联系
+                
